@@ -24,20 +24,20 @@ let listtable = document.getElementById('list')
 function makeProfilelist () {
     let keys = Object.keys(data[selectbox.value])
     console.log(keys)
-    let list_html = '<table>'
+    let list_html = '<table id="list" class="table table-striped"><thead><th scope="col">filename</th><th scope="col">url</th></thead><tbody>'
     
     for (obj in keys) {
-        list_html += '<tr><td>' + keys[obj] + '</td><td>' + changeColor(data[selectbox.value][keys[obj]]) + '</td><tr>'
+        list_html += '<tr><th>' + keys[obj] + '</th><td>' + changeColor(data[selectbox.value][keys[obj]]) + '</td><tr>'
     }
-    list_html += '</table>'
+    list_html += '</tbody></table>'
     listtable.innerHTML = list_html
 }
 function changeColor(text){
     let result = text
-    let word = [{'text':'-v3','color':"#0000ff"}]
+    let word = [{'text':'-v3','color':"#0000ff"},{'text':'exa','color':"#FF0000"}]
     for (ch in word) {
-        if (result.indexOf(word[ch]) > -1) {
-            result = result.replace(word[ch], '<font color="#0000ff">' + word[ch] + '</font>')
+        if (result.indexOf(word[ch].text) > -1) {
+            result = result.replace(word[ch].text, '<font color="' + word[ch].color + '">' + word[ch].text + '</font>')
         }
     }
     return result

@@ -6,24 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table#list, td#list {
-            border-right: 1px solid black;
-            border-bottom: 1px solid black;
-        }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script type="text/javascript" src="data.js"></script>
 </head>
-<body><button id="button1" download="hello.txt">data URIs(With default MIME type)</button>
+<body>
     <div id="app">
-        <table>
-            <tr>
-                <td rowspan="2"><select id="select" size=20></select></td>
-                <td><button id="generate">作成</button></td>
-            </tr>
-            <tr>
-                <td><table id="list"></table></td>
-            </tr>
-        </table>
+        <container>
+            <table class="waku" width="100%">
+                <tr valign="top">
+                    <td rowspan="2">
+                        <select id="select" class="form-select" size=20></select>
+                    </td>
+                    <td>
+                        <button id="generate">作成</button>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td>
+                        <div id="list"></div>
+                    </td>
+                </tr>
+            </table>
+        </container>
     </div>
 <!--
     <script src="https://unpkg.com/vue@next"></script>
