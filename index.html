@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table#list, td#list {
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript" src="data.js"></script>
+</head>
+<body><button id="button1" download="hello.txt">data URIs(With default MIME type)</button>
+    <div id="app">
+        <table>
+            <tr>
+                <td rowspan="2"><select id="select" size=20></select></td>
+                <td><button id="generate">作成</button></td>
+            </tr>
+            <tr>
+                <td><table id="list"></table></td>
+            </tr>
+        </table>
+    </div>
+<!--
+    <script src="https://unpkg.com/vue@next"></script>
+-->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
